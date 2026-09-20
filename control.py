@@ -106,7 +106,8 @@ def update():
         request = request.decode()
         print(request)
         
-        query = get_query(request)
+        query = get_query("この値は？",request)
+        print(query)
         
         if query:
             action = get_query_value(query,"action")
@@ -117,11 +118,11 @@ def update():
 
             if action == "set":
 
-                start_day = get_query_value(request, "startDay")
-                start_time = get_query_value(request, "startTime")
-                interval = get_query_value(request, "howMany")
-                duration = get_query_value(request, "howLong")
-                check = get_query_value(request, "check")
+                start_day = get_query_value(query, "startDay")
+                start_time = get_query_value(query, "startTime")
+                interval = get_query_value(query, "howMany")
+                duration = get_query_value(query, "howLong")
+                check = get_query_value(query, "check")
                 
 
                 print("start_day :", repr(start_day))
@@ -198,9 +199,9 @@ def update():
         full_response = http_header+html_contents
         
         
-        print("HTML作成完了")
-        print("設定:", settings)
-        print("HTML送信開始")
+        # print("HTML作成完了")
+        # print("設定:", settings)
+        # print("HTML送信開始")
 
         cl.send(full_response.encode())
         print("HTML送信完了")

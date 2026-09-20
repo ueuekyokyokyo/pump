@@ -92,7 +92,7 @@ except Exception as e:
         0
     ))
 
-print("現在時刻:", rtc.datetime())
+print("現在時刻を表示します:", rtc.datetime())
 
 
 
