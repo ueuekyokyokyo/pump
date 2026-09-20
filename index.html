@@ -1,0 +1,46 @@
+<!DOCTYPE html><html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+
+<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}
+.buttonGreen { background-color: #4CAF50; border: 2px solid #000000;; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; }
+.buttonRed { background-color: #D11D53; border: 2px solid #000000;; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; }
+text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}
+</style>
+
+</head>
+<body>
+    <center><h1>水やりシステム</h1></center><br><br>
+
+    <h2>ポンプ定期実行</h2>
+    <form action="/" method="get">
+
+    <p>いつから：　<input type="date" name="startDay" value=%s> / <input type="time" name="startTime" value=%s></p>
+    <p>間隔（分）：　<input type="time" name="howMany" value=%s></p>
+    <p>どのくらい（分）：　<input type="time" name="howLong" value=%s></p>
+    <p>セットする：　<input type="checkbox" name="check" value="true" %s></p>
+
+
+    <button type="submit" name="action" value="set">セット</button>
+
+
+    <h2>ポンプデバック実行</h2>
+    <button class="buttonGreen" name="action" value="pump_on" type="submit">ポンプ実行</button>
+    <button class="buttonRed" name="action" value="pump_off" type="submit">ポンプストップ</button>
+
+    </form>
+
+    <br><br>
+
+
+    <br><br>
+
+    <p>いつから: %s %s</p>
+    <p>何分おきに: %s</p>
+    <p>何分間？: %s</p>
+    <p>セットボタン: %s</p>
+    
+</body></html>
